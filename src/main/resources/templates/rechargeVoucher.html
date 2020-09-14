@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Voucher</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Card Register Details</h2>
+    <form class="form-horizontal" th:object="${voucher}" th:action="@{/voucher}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Product Id:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{productId}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{name}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Voucher:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{voucherNumber}"/>
+                </div>
+            </div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Phone:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" th:field="*{phonenumber}" />
+				</div>
+			</div>
+
+			<div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+</div>
+rechareg
+</body>
+</html>
